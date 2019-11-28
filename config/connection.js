@@ -5,7 +5,13 @@ const connection = mysql.createConnection({
     port:3306,
     user:'root',
     password:'password',
-    database:'seinfield'
+    database:'burgers_db'
 })
 
+connection.connect(function(err){
+    if(err) {
+        console.log('failed to connect to DB')
+    }
+    console.log("Connected to DB")
+})
 module.exports = connection
