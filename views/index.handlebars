@@ -1,0 +1,38 @@
+
+<div class='container'>
+    <div class='list-container'>
+        
+        <ul class='uneaten-list'>
+            {{#each burgers}}
+                {{#unless devoured}}
+                <div>
+                    <li>
+                        {{this.id}}
+                        {{this.burger}}
+                        {{this.devoured}}
+                        <button class='devourButton' value={{this.id}}>EAT IT!</button>
+                    </li>
+
+                </div>
+                {{/unless}}
+            {{/each}}
+        </ul>
+
+
+        <ul class='eaten-list'>
+            {{#each burgers}}
+                {{#if devoured}}
+                <div>
+                    <li>
+                        {{this.id}}
+                        {{this.burger}}
+                        {{this.devoured}}
+                    </li>
+                </div>
+                {{/if}}
+            {{/each}}
+        </ul>
+
+    </div>
+</div>
+

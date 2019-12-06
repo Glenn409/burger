@@ -1,0 +1,10 @@
+body{
+    background-color:lightcoral;
+}
+ul {
+    
+}
+
+.list-container{
+    display:flex;
+}

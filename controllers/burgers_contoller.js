@@ -3,7 +3,13 @@ const router = express.Router()
 const burger = require('../models/burger')
 
 router.get('/',function(req,res){
-    burger.readAll();
+    burger.all(function(data){
+        let burgerObject = {
+            burgers:data
+        }
+        console.log(burgerObject)
+        res.render('index',burgerObject)
+    })
 })
 
 module.exports = router
