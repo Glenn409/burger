@@ -12,4 +12,12 @@ router.get('/',function(req,res){
     })
 })
 
+
+router.put('/api/burgers/:id',function(req,res){
+    const id = req.params.id
+    const devoured = req.body.devoured
+    
+    // burger.update({})
+    })
+
 module.exports = router
