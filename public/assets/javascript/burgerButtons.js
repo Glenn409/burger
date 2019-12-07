@@ -26,6 +26,6 @@ $(document).on('click', '#submit-button',function(){
         type:'POST',
         data: obj
     }).then(function(){
-        // location.reload()
+        location.reload()
     })
 })
