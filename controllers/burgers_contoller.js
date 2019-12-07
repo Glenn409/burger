@@ -17,7 +17,26 @@ router.put('/api/burgers/:id',function(req,res){
     const id = req.params.id
     const devoured = req.body.devoured
     
-    // burger.update({})
+    burger.eat(id,function(data){
+        console.log(data)
+    if (data.changedRows == 0) {
+        return res.status(404).end();
+        } else {
+        return res.status(200).end();
+        }
     })
+})
 
+router.post('/api/burgers/new',function(req,res){
+    let newBurger = req.body.burger
+    console.log('recieved obj: '+newBurger)
+
+    burger.create({burger:newBurger},function(data){
+        if (data.changedRows == 0) {
+            return res.status(404).end();
+          } else {
+            return res.status(200).end();
+          }
+    })
+})
 module.exports = router

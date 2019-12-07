@@ -14,3 +14,18 @@ $(document).on('click', '.devourButton',function(){
         location.reload()
     })
 })
+
+$(document).on('click', '#submit-button',function(){
+    console.log("pressed")
+    const newBurger = $('#input-form').val().trim()
+    console.log("creating burger: " + newBurger)
+    let obj = {
+        burger: newBurger
+    }
+    $.ajax('/api/burgers/new',{
+        type:'POST',
+        data: obj
+    }).then(function(){
+        // location.reload()
+    })
+})

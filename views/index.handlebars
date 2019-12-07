@@ -1,38 +1,34 @@
 
-<div class='container'>
-    <div class='list-container'>
-        
-        <ul class='uneaten-list'>
-            {{#each burgers}}
-                {{#unless devoured}}
-                <div>
-                    <li>
-                        {{this.id}}
-                        {{this.burger}}
-                        {{this.devoured}}
-                        <button class='devourButton' value={{this.id}}>EAT IT!</button>
-                    </li>
-
-                </div>
-                {{/unless}}
-            {{/each}}
-        </ul>
+<div class='list-container'>
+    
+    <ul class='uneaten-list'>
+        <h2>Burgers not yet devoured</h2>
+        {{#each burgers}}
+            {{#unless devoured}}
+            <div class='list-row'>
+                <li class='item'>
+                    {{this.burger}}
+                </li>
+                <button class='devourButton' value={{this.id}}>EAT IT!</button>
+            </div>
+            {{/unless}}
+        {{/each}}
+    </ul>
 
 
-        <ul class='eaten-list'>
-            {{#each burgers}}
-                {{#if devoured}}
-                <div>
-                    <li>
-                        {{this.id}}
-                        {{this.burger}}
-                        {{this.devoured}}
-                    </li>
-                </div>
-                {{/if}}
-            {{/each}}
-        </ul>
+    <ul class='eaten-list'>
+        <h2>Burgers devoured</h2>
+        {{#each burgers}}
+            {{#if devoured}}
+            <div class='list-row'>
+                <li class='item'>
+                    {{this.burger}}
+                </li>
+            </div>
+            {{/if}}
+        {{/each}}
+    </ul>
 
-    </div>
 </div>
+
 
