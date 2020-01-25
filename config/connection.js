@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 
-let connection =  mysql.createConnection('mysql://m92bsjk1supk5hmt:uc0axiefhlg1k32m@jlg7sfncbhyvga14.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/awmai39kfq2czxe3')
+let connection =  mysql.createConnection('mysql://stdbqc45lrwi3h0w:rqgacd52el88zt67@ui0tj7jn8pyv9lp6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/nza7gasbdcxr05oq')
 // if(process.env.JAWSDB_URL){
 //     connection = mysql.createConnection(process.env.JAWSDB_URL)
 // } else {
