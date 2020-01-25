@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 
-const connection = mysql.createConnection('mysql://sft36g6rbqbt885w:q5487vtlh86rzso9@wp433upk59nnhpoh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/g3d8to0e7c0lls8w')
+const connection = mysql.createConnection('mysql://sft36g6rbqbt885w:q5487vtlh86rzso9@wp433upk59nnhpoh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/burgers_db')
 // const connection = mysql.createConnection({
 //     host: 'localhost',
 //     port:3306,
